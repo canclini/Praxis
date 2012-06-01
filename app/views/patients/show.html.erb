@@ -4,6 +4,8 @@
 </div>
 
 <dl class="dl-horizontal">
+  <dt><strong>Managed Care?</strong></dt>
+  <dd><%= @patient.is_mc? %></dd>
   <dt><strong><%= model_class.human_attribute_name(:firstname) %>:</strong></dt>
   <dd><%= @patient.firstname %></dd>
   <dt><strong><%= model_class.human_attribute_name(:lastname) %>:</strong></dt>
