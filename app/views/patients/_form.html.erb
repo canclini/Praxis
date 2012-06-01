@@ -1,0 +1,21 @@
+<%= simple_form_for @patient, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> Patient</legend>
+    <%= f.input :lastname %>
+    <%= f.input :firstname %>
+    <%= f.input :gender %>
+    <%= f.input :birthdate %>
+    <%= f.input :street %>
+    <%= f.input :city %>
+    <%= f.input :plz %>
+    <%= f.input :insurance %>
+    <%= f.input :insurantnumber %>
+    <%= f.input :mco %>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                patients_path, :class => 'btn' %>
+  </div>
+  </fieldset>
+<% end %>
