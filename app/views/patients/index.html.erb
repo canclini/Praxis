@@ -18,7 +18,7 @@
         <td><%= link_to patient.lastname, patient_path(patient) %></td>
         <td><%= patient.firstname %></td>
         <td><%= patient.birthdate %></td>
-        <td>Nein/Ja/prüfen</td>
+        <td><%= image_tag('bluecare.gif') if patient.is_mc? %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_patient_path(patient), :class => 'btn btn-mini' %>

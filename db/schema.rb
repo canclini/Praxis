@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20120601131226) do
     t.datetime "updated_at",                          :null => false
     t.boolean  "managed_care",     :default => false
     t.datetime "last_mc_check_at"
+    t.string   "be_uuid"
   end
 
 end

@@ -124,6 +124,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activeresource
   coffee-rails (~> 3.2.1)
   httparty
   jquery-rails

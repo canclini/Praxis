@@ -4,8 +4,13 @@
 </div>
 
 <dl class="dl-horizontal">
-  <dt><strong>Managed Care?</strong></dt>
-  <dd><%= @patient.is_mc? %></dd>
+  <% if @patient.is_mc? %>
+    <dt><strong>Managed Care</strong></dt>
+    <dd>Der Patient ist Managed Care versichert</dd>
+    <dd><%= image_tag('bluecare.gif')%></dd>
+    <dd><%= link_to "in BlueEvidence anzeigen", @patient.be_url %></dd>
+    <dd><%= link_to "eine administrative Überweisung tätigen", @patient.be_referral_url %></dd>
+  <% end %>
   <dt><strong><%= model_class.human_attribute_name(:firstname) %>:</strong></dt>
   <dd><%= @patient.firstname %></dd>
   <dt><strong><%= model_class.human_attribute_name(:lastname) %>:</strong></dt>

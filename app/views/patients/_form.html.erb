@@ -4,7 +4,7 @@
     <%= f.input :lastname %>
     <%= f.input :firstname %>
     <%= f.input :gender %>
-    <%= f.input :birthdate %>
+    <%= f.input :birthdate, :start_year => Date.today.year - 100, :end_year => Date.today.year + 1 %>
     <%= f.input :street %>
     <%= f.input :city %>
     <%= f.input :plz %>
